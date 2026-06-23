@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+.claude/
+# Raw source documents (not needed in repo)
+*.docx
+Yong Lian.jpg
+claude design/
