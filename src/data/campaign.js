@@ -86,7 +86,7 @@ export const campaign = {
     {
       title: 'For Publications and Conferences:',
       items: [
-        'Editor-in-Chief, Integrated Circuits and Systems (The first journal under Chinese Science & Technology Journals of Excellence Plan hosted in IEEE Xplore, 2024-2026)',
+        'Founding Editor-in-Chief, Integrated Circuits and Systems (The first journal under Chinese Science & Technology Journals of Excellence Plan hosted in IEEE Xplore, 2024-2026)',
         'Editor-in-Chief, IEEE Transactions on Circuits and Systems II (2010-2013)',
         'Chair, Management Committee of the IEEE Transactions on CAS for AI (2024-2026)',
         'Chair, IEEE Transactions on Multimedia Steering Committee (2013-2015)',

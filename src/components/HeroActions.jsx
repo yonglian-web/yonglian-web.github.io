@@ -1,22 +1,17 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from './Button.jsx';
 
-// Home (election) hero CTAs: Vote scrolls to the Statement section; View Website
-// navigates into the personal CV section (Education & Employment entry).
+// Home (election) hero CTAs: Vote links to IEEE official election page; View Website
+// navigates into the personal CV section (Honors & Awards entry).
 export function HeroActions() {
   const { t } = useTranslation();
 
-  function scrollToStatement(event) {
-    event.preventDefault();
-    document.getElementById('statement')?.scrollIntoView({ behavior: 'smooth' });
-  }
-
   return (
     <div className="hero__actions">
-      <Button href="#statement" variant="inverse" onClick={scrollToStatement}>
+      <Button href="https://www.ieee.org/about/corporate/election/technical-activities#yong-peter-lian12?utm_source=website&utm_medium=organic&utm_campaign=2026-candidate-video-lian-bio" variant="inverse">
         {t('buttons.vote')}
       </Button>
-      <Button to="/experience" variant="ghost">
+      <Button to="/honors" variant="ghost">
         {t('buttons.viewWebsite')}
       </Button>
     </div>

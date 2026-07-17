@@ -6,7 +6,7 @@ import { CvList } from '../components/CvList.jsx';
 
 export function PublicationsPage({ cv }) {
   const { t } = useTranslation();
-  const { research, teaching } = cv;
+  const { research } = cv;
 
   return (
     <article className="document-page">
@@ -31,16 +31,6 @@ export function PublicationsPage({ cv }) {
         </div>
       </section>
 
-      <section className="document-band document-band--muted">
-        <div className="document-section">
-          <SectionHeading title={t('teaching.pubsTitle')} />
-          <div className="ieee-activities">
-            <CvList title={t('teaching.pubsBookChapters')} items={teaching.bookChapters} ordered />
-            <CvList title={t('teaching.pubsJournalPapers')} items={teaching.journalPapers} ordered />
-            <CvList title={t('teaching.pubsConferencePapers')} items={teaching.conferencePapers} ordered />
-          </div>
-        </div>
-      </section>
     </article>
   );
 }

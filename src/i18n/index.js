@@ -4,26 +4,28 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import { en } from './en.js';
 import { zh } from './zh.js';
 
+// TEMP: Chinese translation not yet ready — locked to English.
+// To restore bilingual mode: uncomment .use(LanguageDetector), remove lng:'en',
+// and restore the detection block below.
 i18n
-  .use(LanguageDetector)
+  // .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
       en: { translation: en },
       zh: { translation: zh },
     },
+    lng: 'en', // TEMP: force English; remove when Chinese is ready
     fallbackLng: 'en',
     supportedLngs: ['en', 'zh'],
     nonExplicitSupportedLngs: true, // zh-CN / zh-TW / zh-Hans → zh
     load: 'languageOnly', // en-US → en, zh-CN → zh
-    detection: {
-      // querystring first so ?lng=en / ?lng=zh can force a language for testing;
-      // real visitors fall through to a saved choice, then their browser/region.
-      order: ['querystring', 'localStorage', 'navigator'],
-      lookupQuerystring: 'lng',
-      lookupLocalStorage: 'i18nextLng',
-      caches: ['localStorage'],
-    },
+    // detection: {
+    //   order: ['querystring', 'localStorage', 'navigator'],
+    //   lookupQuerystring: 'lng',
+    //   lookupLocalStorage: 'i18nextLng',
+    //   caches: ['localStorage'],
+    // },
     interpolation: { escapeValue: false },
     returnEmptyString: false,
   });

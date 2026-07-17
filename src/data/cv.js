@@ -315,7 +315,7 @@ export const cv = {
       "Energy efficient signal processing platform for low voltage and low power circuits and systems, especially in event-driven/asynchronous signal processing techniques.",
       "Body channel communications for wearable sensors."
     ],
-    "grants": "Dr. Lian’s research has attracted more than $28 million research funds from various sources. The largest grant is SG$10M (~$10M) from National Research Foundation of Singapore under the Competitive Research Program.",
+    "grants": "Dr. Lian’s research has attracted more than $28 million research funds from various sources. The largest grant is SGD10M (~$8M) from National Research Foundation of Singapore under the Competitive Research Program.",
     "publicationsSummary": "Published a book, 4 book chapters, and more than 350 papers in peer-reviewed international journals and international conferences.",
     "scholarUrl": "https://scholar.google.com/citations?user=s7dD018AAAAJ&hl=en",
     "supervision": "45 M.Eng (research-based, with thesis) and 38 Ph.D. graduates supervised.",

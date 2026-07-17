@@ -55,7 +55,7 @@ export function SiteHeader({ campaign, navItems }) {
             </span>
           </span>
         </a>
-        <LanguageToggle />
+        {/* <LanguageToggle /> */}{/* TEMP: hidden until Chinese is ready */}
       </div>
 
       <nav className="template-switcher" aria-label="Section navigation">

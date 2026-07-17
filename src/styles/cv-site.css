@@ -1,0 +1,478 @@
+/* ============================================================
+   Personal (CV) site — institutional card aesthetic.
+
+   The election home and the CV pages share class names (.hero,
+   .document-page, .document-band, .fact-strip, .button …), so every
+   rule here is scoped under .cv-site — the wrapper CvLayout puts
+   around the CV chrome. global.css is never edited; an empty diff
+   there is what proves the home page is untouched.
+
+   Loaded AFTER global.css (see main.jsx) so equal-specificity
+   collisions resolve in this file's favour.
+   ============================================================ */
+
+.cv-site {
+  --blue: #2456a6;
+  --blue-deep: #173e7c;
+  --blue-ink: #12315e;
+  --blue-pale: #eaf1fb;
+  --blue-line: #cfddf2;
+  --green: #1e7a4f;
+  --orange: #e8940a;
+  --gold: #f5a623;
+  --purple: #6c4bb8;
+  --ink: #1c2635;
+  --gray: #5a6678;
+  --wash: #f5f8fd;
+  --sans: "Source Sans 3", "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --radius: 14px;
+  --shadow: 0 10px 30px -18px rgba(23, 62, 124, 0.35);
+  --wrap: 1100px;
+
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.cv-site :focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ---------- reset layer ----------
+   These three undo the old aesthetic. Each targets a rule that does not
+   share a name with anything restyled below, so they are easy to miss. */
+
+/* global.css sets font-family directly on .document-page — inheriting a font
+   from .cv-site cannot override it, so the serif body needs an explicit kill. */
+.cv-site .document-page {
+  color: var(--ink);
+  font-family: var(--sans);
+}
+
+/* Decorative circles sized for the old dark-blue hero. */
+.cv-site .hero::before,
+.cv-site .hero::after {
+  content: none;
+}
+
+/* global.css appends "→" to every button; the card aesthetic has no arrows. */
+.cv-site .button::after {
+  content: "";
+  margin-left: 0;
+}
+
+/* ---------- chrome: header ---------- */
+.cv-site .site-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--blue-line);
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+
+.cv-site .masthead {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  height: 64px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--wrap);
+  padding: 0 22px;
+}
+
+.cv-site .brand__name {
+  color: var(--blue-deep);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+.cv-site .template-switcher {
+  border-top: 0;
+  display: flex;
+  gap: 4px;
+  margin: 0 auto;
+  max-width: var(--wrap);
+  padding: 0 22px 8px;
+}
+
+.cv-site .template-switcher a {
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  color: var(--ink);
+  font: 500 14.5px var(--sans);
+  padding: 7px 10px;
+}
+
+.cv-site .template-switcher a:hover {
+  background: var(--blue-pale);
+  color: var(--blue-deep);
+}
+
+.cv-site .template-switcher a.is-active {
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid var(--orange);
+  border-radius: 0;
+  color: var(--blue-deep);
+  font-weight: 700;
+}
+
+/* ---------- hero ---------- */
+.cv-site .hero {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.97)),
+    url("/hero_background_network.png") center / cover no-repeat;
+  border-bottom: 1px solid var(--blue-line);
+  color: var(--ink);
+  padding: 56px 22px 40px;
+}
+
+.cv-site .hero__inner {
+  gap: 36px;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  max-width: var(--wrap);
+}
+
+.cv-site .hero__portrait {
+  background: none;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  height: auto;
+  width: min(340px, 80vw);
+}
+
+.cv-site .hero__portrait img {
+  border-radius: 16px;
+  height: auto;
+}
+
+.cv-site .hero h1 {
+  color: var(--blue-deep);
+  font-size: clamp(30px, 4.6vw, 46px);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+
+/* .hero .eyebrow in global.css is (0,2,0) — this needs three classes to win
+   outright rather than relying on source order. The light hero needs a dark
+   eyebrow; the inherited pale blue would be near-invisible. */
+.cv-site .hero .eyebrow {
+  color: var(--blue);
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  margin: 0 0 6px;
+}
+
+.cv-site .hero__role {
+  color: var(--gray);
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0 0 22px;
+  max-width: 46rem;
+}
+
+/* ---------- buttons ----------
+   The inverse/ghost variants were designed for the dark-blue hero (white on
+   white / white border on white). On the light hero they must be repainted or
+   they disappear entirely. */
+.cv-site .button {
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-weight: 700;
+  min-height: auto;
+  padding: 13px 26px;
+}
+
+.cv-site .button--inverse {
+  background: var(--blue-deep);
+  border-color: var(--blue-deep);
+  color: #fff;
+}
+
+.cv-site .button--inverse:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.cv-site .button--ghost {
+  background: #fff;
+  border: 2px solid var(--blue-line);
+  color: var(--blue-deep);
+}
+
+.cv-site .button--ghost:hover {
+  border-color: var(--blue);
+}
+
+.cv-site .button--primary {
+  background: linear-gradient(180deg, var(--gold), var(--orange));
+  border: 0;
+  box-shadow: 0 8px 18px -8px rgba(200, 130, 0, 0.6);
+  color: #fff;
+}
+
+.cv-site .button--primary:hover {
+  filter: brightness(1.05);
+}
+
+/* ---------- fact strip ----------
+   Five cells is exactly the density the card look is built for — this is where
+   the aesthetic reads most clearly. */
+.cv-site .fact-strip {
+  gap: 14px;
+  max-width: var(--wrap);
+  padding: 26px 0;
+  width: min(calc(100% - 44px), var(--wrap));
+}
+
+.cv-site .fact-strip div,
+.cv-site .fact-strip div:first-child {
+  background: #fff;
+  border: 1px solid var(--blue-line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.cv-site .fact-strip span {
+  color: var(--gray);
+  font-size: 13.5px;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-bottom: 4px;
+  text-transform: none;
+}
+
+.cv-site .fact-strip strong {
+  color: var(--blue-deep);
+  font-family: var(--mono);
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+/* ---------- bands & sections ---------- */
+.cv-site .document-band {
+  padding: 64px 0;
+}
+
+.cv-site .document-band--muted {
+  background: var(--wash);
+}
+
+.cv-site .document-section {
+  margin: 0 auto;
+  max-width: var(--wrap);
+  padding: 0 22px;
+  width: auto;
+}
+
+.cv-site .document-section .section-heading {
+  margin-bottom: 24px;
+}
+
+.cv-site .document-section .section-heading h2 {
+  color: var(--blue-deep);
+  font-family: var(--sans);
+  font-size: clamp(23px, 3vw, 30px);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.cv-site .document-section p {
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 70ch;
+}
+
+/* ---------- lists ----------
+   No cards here on purpose: conferenceCommittees is ~99 items and keynotes ~66.
+   The card look is built for 3–5 items at a time; 99 shadowed boxes would be
+   unreadable. The alternating band tint carries the rhythm instead, and the
+   rows keep hairline separators in the new palette. */
+.cv-site .ieee-activity-group h3 {
+  color: var(--blue-deep);
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cv-site .ieee-activity-list li {
+  border-bottom: 1px solid var(--blue-line);
+  color: var(--ink);
+  font-size: 15.5px;
+  line-height: 1.6;
+  max-width: 70ch;
+  padding: 7px 0 7px 28px;
+}
+
+.cv-site .ieee-activity-list li::before {
+  background: var(--orange);
+  border-radius: 3px;
+  height: 10px;
+  top: 15px;
+  width: 10px;
+}
+
+.cv-site .cv-list--ordered li {
+  border-bottom: 1px solid var(--blue-line);
+  color: var(--ink);
+  font-size: 15.5px;
+  line-height: 1.6;
+  max-width: 70ch;
+  padding: 9px 0 9px 44px;
+}
+
+.cv-site .cv-list--ordered li::before {
+  color: var(--orange);
+  font-family: var(--mono);
+  font-size: 13.5px;
+  font-weight: 500;
+  top: 9px;
+}
+
+.cv-site .record-list li {
+  border-bottom: 1px solid var(--blue-line);
+}
+
+.cv-site .record-list time {
+  color: var(--orange);
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cv-site .record-list span {
+  color: var(--ink);
+  max-width: 70ch;
+}
+
+.cv-site .record-list span strong {
+  color: var(--blue-deep);
+  font-size: 16.5px;
+}
+
+.cv-site .cv-affil {
+  color: var(--gray);
+}
+
+.cv-site .cv-detail {
+  color: var(--ink);
+}
+
+.cv-site .cv-highlight {
+  color: var(--blue-deep);
+  font-weight: 700;
+}
+
+/* ---------- footer ---------- */
+.cv-site .site-footer {
+  background: var(--blue-ink);
+  color: #b9c8e2;
+  font-size: 14px;
+  padding: 38px 22px 46px;
+}
+
+.cv-site .site-footer__inner {
+  gap: 12px;
+  grid-template-columns: 1fr;
+  max-width: var(--wrap);
+}
+
+.cv-site .site-footer h2 {
+  color: #93a7cb;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.cv-site .site-footer p,
+.cv-site .site-footer a {
+  color: #dce7f8;
+  font-size: 14px;
+}
+
+/* ---------- responsive ----------
+   Media queries add no specificity, so every scoped rule above would otherwise
+   beat global.css's breakpoints at ALL widths (e.g. the fact strip would stay
+   5-up on a phone). Each global breakpoint touching a class restyled above must
+   be re-declared here. */
+@media (max-width: 1024px) {
+  /* global.css drops the header to position:static and stacks the masthead;
+     the card design keeps a sticky 64px bar at every width. */
+  .cv-site .site-header {
+    position: sticky;
+  }
+
+  .cv-site .masthead {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .cv-site .fact-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cv-site .fact-strip div,
+  .cv-site .fact-strip div:first-child {
+    border: 1px solid var(--blue-line);
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 880px) {
+  .cv-site .template-switcher {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 840px) {
+  .cv-site .hero__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .cv-site .hero {
+    padding: 40px 22px 32px;
+  }
+
+  .cv-site .hero__portrait {
+    max-width: min(340px, 80vw);
+    min-height: 0;
+  }
+
+  .cv-site .hero__actions .button {
+    width: 100%;
+  }
+
+  .cv-site .fact-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-site .document-band {
+    padding: 44px 0;
+  }
+
+  .cv-site .document-page .record-list li,
+  .cv-site .record-list li {
+    gap: 0.375rem;
+    grid-template-columns: 1fr;
+  }
+}

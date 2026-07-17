@@ -31,7 +31,7 @@ export const en = {
       'The opinions expressed herein are the opinions of the author and not necessarily the opinions of IEEE.',
   },
   buttons: {
-    vote: 'Vote for Yong Lian',
+    vote: 'Vote for Peter Lian',
     viewWebsite: 'View Personal Website',
     contact: 'Contact me',
     electionSite: 'Election Website',
