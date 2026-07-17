@@ -14,7 +14,7 @@ export function CvSiteHeader({ campaign, navItems }) {
             <span className="brand__name">{campaign.displayName}</span>
           </span>
         </Link>
-        {/* <LanguageToggle /> */}{/* TEMP: hidden until Chinese is ready */}
+        <LanguageToggle />
       </div>
 
       <nav className="template-switcher" aria-label="Site navigation">

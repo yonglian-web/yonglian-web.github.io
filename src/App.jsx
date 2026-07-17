@@ -4,6 +4,7 @@ import { campaign } from './data/campaign.js';
 import { cv } from './data/cv.js';
 import { CampaignLayout } from './layouts/CampaignLayout.jsx';
 import { CvLayout } from './layouts/CvLayout.jsx';
+import { HomePage } from './pages/HomePage.jsx';
 import { StatementPage } from './pages/StatementPage.jsx';
 import { ExperiencePage } from './pages/ExperiencePage.jsx';
 import { HonorsPage } from './pages/HonorsPage.jsx';
@@ -29,6 +30,14 @@ export function App() {
       <Routes>
         <Route
           path="/"
+          element={
+            <CampaignLayout>
+              <HomePage />
+            </CampaignLayout>
+          }
+        />
+        <Route
+          path="/statement"
           element={
             <CampaignLayout>
               <StatementPage campaign={campaign} />
@@ -87,7 +96,7 @@ export function App() {
           path="*"
           element={
             <CampaignLayout>
-              <StatementPage campaign={campaign} />
+              <HomePage />
             </CampaignLayout>
           }
         />
