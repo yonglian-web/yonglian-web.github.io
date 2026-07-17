@@ -32,6 +32,7 @@ export const zh = {
     viewWebsite: '查看个人网站',
     contact: '联系我',
     electionSite: '竞选网站',
+    downloadCv: '下载完整简历 PDF',
     viewScholar: '在 Google Scholar 查看',
   },
   facts: {

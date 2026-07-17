@@ -35,6 +35,7 @@ export const en = {
     viewWebsite: 'View Personal Website',
     contact: 'Contact me',
     electionSite: 'Election Website',
+    downloadCv: 'Download full CV (PDF)',
     viewScholar: 'View on Google Scholar',
   },
   facts: {

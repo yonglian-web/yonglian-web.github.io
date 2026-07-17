@@ -184,6 +184,35 @@
   max-width: 46rem;
 }
 
+/* ---------- badge icons ----------
+   The teacher's colour comes almost entirely from these: a coloured circle with
+   a white glyph. Each CV page gets one in its hero, and each section heading a
+   smaller one, so the palette reads even on list-heavy pages. */
+.cv-site .hero__icon {
+  height: 64px;
+  margin: 0 0 10px;
+  width: 64px;
+}
+
+.cv-site .brand {
+  gap: 10px;
+}
+
+.cv-site .brand__icon {
+  height: 34px;
+  width: 34px;
+}
+
+/* global.css sets img{display:block}, which would drop the icon onto its own
+   line above the heading. */
+.cv-site .section-heading__icon {
+  display: inline-block;
+  height: 40px;
+  margin-right: 12px;
+  vertical-align: -9px;
+  width: 40px;
+}
+
 /* ---------- buttons ----------
    The inverse/ghost variants were designed for the dark-blue hero (white on
    white / white border on white). On the light hero they must be repainted or
@@ -257,10 +286,13 @@
   text-transform: none;
 }
 
+/* Sans, matching the teacher's .stat b — mono is reserved for the eyebrow,
+   years and list numerals. Mono here also wrapped the text values ("IEEE
+   Fellow"), which the teacher's all-numeric stats never hit. */
 .cv-site .fact-strip strong {
   color: var(--blue-deep);
-  font-family: var(--mono);
   font-size: 32px;
+  font-weight: 700;
   line-height: 1.1;
 }
 
