@@ -424,8 +424,8 @@
 .cs-hero__grid {
   align-items: center;
   display: grid;
-  gap: 30px;
-  grid-template-columns: 1.12fr 0.88fr;
+  gap: 24px;
+  grid-template-columns: 1.32fr 0.74fr;
   margin: 0 auto;
   max-width: 1200px;
   padding: 54px 30px 18px;
@@ -525,6 +525,7 @@
 /* Cut-out portrait sitting directly on the hero (no frame), softly faded at the
    bottom so it melts into the network background — matches the reference design. */
 .cs-hero__photo {
+  margin-right: -34px;
   position: relative;
   width: min(100%, 430px);
   z-index: 1;
@@ -590,6 +591,7 @@
   border-radius: 16px;
   box-shadow: 0 14px 34px rgba(21, 41, 79, 0.08);
   gap: 22px;
+  grid-template-columns: 1.25fr 0.9fr;
   max-width: none;
   padding: 22px 24px;
 }
@@ -1542,6 +1544,7 @@
   }
 
   .cs-hero__photo {
+    margin-right: 0;
     width: min(100%, 320px);
   }
 
