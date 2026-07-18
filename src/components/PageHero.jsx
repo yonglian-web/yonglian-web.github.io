@@ -10,7 +10,7 @@ export function PageHero({ kicker, title, intro }) {
       <section className="hero">
         <div className="hero__inner">
           <div className="hero__portrait">
-            <img src={campaign.avatar} alt={campaign.name} />
+            <img src="/yong-lian-cutout.png" alt={campaign.name} />
           </div>
           <div className="hero__content">
             {kicker ? <p className="eyebrow">{kicker}</p> : null}
