@@ -10,10 +10,10 @@ export function CvHeroActions() {
 
   return (
     <div className="hero__actions">
-      <Button href="/cv.pdf" variant="primary">
+      <Button href="/cv.pdf" variant="inverse">
         {t('buttons.downloadCv')}
       </Button>
-      <Button href={`mailto:${campaign.contactEmail}`} variant="inverse">
+      <Button href={`mailto:${campaign.contactEmail}`} variant="ghost">
         {t('buttons.contact')}
       </Button>
       <Button to="/" variant="ghost">

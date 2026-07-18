@@ -9,7 +9,6 @@ export function CvSiteHeader({ campaign, navItems }) {
     <header className="site-header">
       <div className="masthead">
         <Link to="/" className="brand" aria-label={campaign.displayName}>
-          <img className="brand__icon" src="/icons/icon_badge_target_blue.png" alt="" />
           <span>
             <span className="brand__name">{campaign.displayName}</span>
           </span>

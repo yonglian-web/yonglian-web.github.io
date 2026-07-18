@@ -12,19 +12,18 @@ export function HonorsPage({ cv }) {
         kicker={t('honors.heroKicker')}
         title={t('honors.heroTitle')}
         intro={t('honors.heroIntro')}
-        icon="icon_badge_star_gold"
       />
 
       <section className="document-band">
         <div className="document-section">
-          <SectionHeading title={t('honors.honorsTitle')} icon="icon_badge_mountain_blue" />
+          <SectionHeading title={t('honors.honorsTitle')} />
           <CvList items={cv.honors} ordered />
         </div>
       </section>
 
       <section className="document-band document-band--muted">
         <div className="document-section">
-          <SectionHeading title={t('honors.awardsTitle')} icon="icon_badge_star_gold" />
+          <SectionHeading title={t('honors.awardsTitle')} />
           <CvList items={cv.researchAwards} ordered />
         </div>
       </section>

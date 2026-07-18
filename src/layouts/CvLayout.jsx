@@ -15,16 +15,12 @@ const navItems = [
   { key: 'nav.experience', to: '/experience' },
 ];
 
-// The .cv-site class scopes the personal-site styling in cv-site.css. The election
-// home shares these class names (.hero, .document-band, …) but not this wrapper, so
-// it keeps its own look. Must stay a plain div: overflow/transform/filter here would
-// create a containing block and break the header's position:sticky.
 export function CvLayout({ children }) {
   return (
-    <div className="cv-site">
+    <>
       <CvSiteHeader campaign={campaign} navItems={navItems} />
       <main>{children}</main>
       <CvSiteFooter campaign={campaign} />
-    </div>
+    </>
   );
 }
