@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useSite } from '../data/useSite.js';
+import { Icon } from './Icon.jsx';
 
-// Voting opens 17 Aug 2026 00:00 ET (04:00 UTC); closes 1 Oct 2026 12:00 ET
-// (16:00 UTC). Ported from the candidate's js/main.js, which hardcodes the same
-// instants.
-const OPEN = Date.UTC(2026, 7, 17, 4, 0, 0);
+// Voting opens 17 Aug 2026 16:00 UTC, closes 1 Oct 2026 16:00 UTC — the instants
+// hardcoded in the candidate's Claude Design. Floating card in the home hero.
+const OPEN = Date.UTC(2026, 7, 17, 16, 0, 0);
 const CLOSE = Date.UTC(2026, 9, 1, 16, 0, 0);
-const DAY = 864e5;
+const DAY = 86400000;
 
 export function Countdown() {
   const s = useSite();
@@ -18,27 +18,35 @@ export function Countdown() {
   }, []);
 
   let label;
-  let value;
+  let num;
+  let unit = s.countdown.unit;
   let date;
   if (now < OPEN) {
     label = s.countdown.before;
-    value = Math.ceil((OPEN - now) / DAY) + s.countdown.days;
+    num = Math.max(0, Math.ceil((OPEN - now) / DAY));
     date = s.countdown.openDate;
   } else if (now < CLOSE) {
     label = s.countdown.during;
-    value = Math.ceil((CLOSE - now) / DAY) + s.countdown.days;
+    num = Math.max(0, Math.ceil((CLOSE - now) / DAY));
     date = s.countdown.closeDate;
   } else {
     label = s.countdown.after;
-    value = s.countdown.thanks;
-    date = '';
+    num = '—';
+    unit = '';
+    date = s.countdown.closeDate;
   }
 
   return (
-    <div className="countdown-card">
-      <small>{label}</small>
-      <b>{value}</b>
-      {date ? <small>{date}</small> : null}
+    <div className="cs-countdown">
+      <div className="cs-countdown__label">
+        <Icon name="calendar" size={14} stroke={1.8} />
+        {label}
+      </div>
+      <div className="cs-countdown__num">
+        {num}
+        {unit ? <span>{unit}</span> : null}
+      </div>
+      <div className="cs-countdown__date">{date}</div>
     </div>
   );
 }

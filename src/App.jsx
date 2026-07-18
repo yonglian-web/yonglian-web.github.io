@@ -1,11 +1,14 @@
 import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { campaign } from './data/campaign.js';
 import { cv } from './data/cv.js';
 import { CampaignLayout } from './layouts/CampaignLayout.jsx';
 import { CvLayout } from './layouts/CvLayout.jsx';
 import { HomePage } from './pages/HomePage.jsx';
-import { StatementPage } from './pages/StatementPage.jsx';
+import { WhyRunningPage } from './pages/WhyRunningPage.jsx';
+import { WhyMePage } from './pages/WhyMePage.jsx';
+import { PlanPage } from './pages/PlanPage.jsx';
+import { HowToVotePage } from './pages/HowToVotePage.jsx';
+import { AboutPage } from './pages/AboutPage.jsx';
 import { ExperiencePage } from './pages/ExperiencePage.jsx';
 import { HonorsPage } from './pages/HonorsPage.jsx';
 import { ProfessionalActivitiesPage } from './pages/ProfessionalActivitiesPage.jsx';
@@ -13,8 +16,9 @@ import { ResearchPage } from './pages/ResearchPage.jsx';
 import { TeachingPage } from './pages/TeachingPage.jsx';
 import { PublicationsPage } from './pages/PublicationsPage.jsx';
 
-// One site: `/` is the election home; the CV pages are hidden sub-routes reached
-// only via the home's "View Website" button (not listed in the home nav).
+// Two sites in one app: the election campaign (CampaignLayout — home + 5 campaign
+// pages, migrated 1:1 from the candidate's Claude Design) and the academic CV
+// (CvLayout — 6 pages), reached from the About page's "full academic record" link.
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -37,10 +41,42 @@ export function App() {
           }
         />
         <Route
-          path="/statement"
+          path="/why-running"
           element={
             <CampaignLayout>
-              <StatementPage campaign={campaign} />
+              <WhyRunningPage />
+            </CampaignLayout>
+          }
+        />
+        <Route
+          path="/why-me"
+          element={
+            <CampaignLayout>
+              <WhyMePage />
+            </CampaignLayout>
+          }
+        />
+        <Route
+          path="/plan"
+          element={
+            <CampaignLayout>
+              <PlanPage />
+            </CampaignLayout>
+          }
+        />
+        <Route
+          path="/how-to-vote"
+          element={
+            <CampaignLayout>
+              <HowToVotePage />
+            </CampaignLayout>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <CampaignLayout>
+              <AboutPage />
             </CampaignLayout>
           }
         />
