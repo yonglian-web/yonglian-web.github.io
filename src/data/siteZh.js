@@ -8,7 +8,7 @@ export const siteZh = {
     whyMe: '为什么是我',
     what: '当选后，我将做什么',
     howVote: '如何投票',
-    about: '关于连勇',
+    about: 'Personal Website',
     vote: '立即投票',
   },
   brand: {

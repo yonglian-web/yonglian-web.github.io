@@ -220,6 +220,7 @@
 
 .cs-logo__name {
   color: var(--cs-navy);
+  display: block;
   font-size: 16px;
   font-weight: 800;
   white-space: nowrap;
@@ -231,9 +232,11 @@
 
 .cs-logo__role {
   color: var(--cs-muted);
+  display: block;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.2px;
+  margin-top: 1px;
   white-space: nowrap;
 }
 
@@ -571,13 +574,12 @@
   border-top: 1px solid #e7eef6;
 }
 
-/* When it lives inside the hero: a rounded card on the hero background. */
+/* When it lives inside the hero's left column: a rounded card under the button,
+   beside the photo. */
 .cs-voteband--hero {
   background: transparent;
   border: 0;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 30px 48px;
+  margin-top: 30px;
   position: relative;
   z-index: 1;
 }
@@ -587,7 +589,9 @@
   border: 1px solid #e3ecf5;
   border-radius: 16px;
   box-shadow: 0 14px 34px rgba(21, 41, 79, 0.08);
+  gap: 22px;
   max-width: none;
+  padding: 22px 24px;
 }
 
 .cs-voteband__inner {

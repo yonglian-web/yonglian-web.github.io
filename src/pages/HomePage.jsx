@@ -32,7 +32,41 @@ export function HomePage() {
                 {s.home.ctaWhy}
                 <Icon name="arrow" size={17} stroke={2} />
               </Link>
-              {/* "Watch 60s video" button removed — no video available yet. */}
+            </div>
+
+            <div className="cs-voteband cs-voteband--hero">
+              <div className="cs-voteband__inner">
+                <div className="cs-voteband__info">
+                  <span className="cs-voteband__badge">
+                    <Icon name="institution" size={26} stroke={1.7} />
+                  </span>
+                  <div>
+                    <div className="cs-voteband__title">{s.home.voteTitle}</div>
+                    <div className="cs-voteband__time">
+                      <Icon name="calendar" size={15} stroke={1.8} />
+                      {s.home.voteTimeLabel}
+                    </div>
+                    <div className="cs-voteband__dates">
+                      {s.home.voteDates}
+                      <br />
+                      <small>{s.home.voteNote}</small>
+                    </div>
+                  </div>
+                </div>
+                <div className="cs-voteband__cta">
+                  <a className="cs-btn cs-btn--orange" href={VOTE_URL} rel="noopener" target="_blank">
+                    {s.home.voteCta}
+                    <Icon name="arrow" size={18} stroke={2.2} />
+                  </a>
+                  <div className="cs-voteband__note">
+                    <span>{s.home.voteSmall}</span>
+                    <Link className="cs-linkbtn" to="/how-to-vote">
+                      {s.home.voteLink}
+                      <Icon name="arrow" size={14} stroke={2} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="cs-hero__media">
@@ -42,41 +76,6 @@ export function HomePage() {
               <img src="/yong-lian-cutout.png" alt={campaign.name} />
             </div>
           </div>
-        </div>
-
-        <div className="cs-voteband cs-voteband--hero">
-          <div className="cs-voteband__inner">
-          <div className="cs-voteband__info">
-            <span className="cs-voteband__badge">
-              <Icon name="institution" size={26} stroke={1.7} />
-            </span>
-            <div>
-              <div className="cs-voteband__title">{s.home.voteTitle}</div>
-              <div className="cs-voteband__time">
-                <Icon name="calendar" size={15} stroke={1.8} />
-                {s.home.voteTimeLabel}
-              </div>
-              <div className="cs-voteband__dates">
-                {s.home.voteDates}
-                <br />
-                <small>{s.home.voteNote}</small>
-              </div>
-            </div>
-          </div>
-          <div className="cs-voteband__cta">
-            <a className="cs-btn cs-btn--orange" href={VOTE_URL} rel="noopener" target="_blank">
-              {s.home.voteCta}
-              <Icon name="arrow" size={18} stroke={2.2} />
-            </a>
-            <div className="cs-voteband__note">
-              <span>{s.home.voteSmall}</span>
-              <Link className="cs-linkbtn" to="/how-to-vote">
-                {s.home.voteLink}
-                <Icon name="arrow" size={14} stroke={2} />
-              </Link>
-            </div>
-          </div>
-        </div>
         </div>
       </section>
 

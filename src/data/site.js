@@ -8,7 +8,7 @@ export const site = {
     whyMe: 'Why Me',
     what: 'My Plan',
     howVote: 'How to Vote',
-    about: 'About',
+    about: 'Personal Website',
     vote: 'Vote now',
   },
   brand: {
