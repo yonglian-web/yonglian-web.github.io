@@ -8,6 +8,7 @@ const STROKE = {
   barsAlt: '<path d="M4 20h16"/><path d="M4 20V9M9 20v-7M14 20v-4M19 20V6"/><path d="M4 9l5-4 5 3 5-4"/>',
   institution: '<path d="M4 10l8-6 8 6"/><path d="M4 10v10h16V10"/><path d="M9 20v-5h6v5"/><path d="M11 8h2"/>',
   calendar: '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/>',
   arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
   network: '<circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M7.6 7.6l3 8M16.4 7.6l-3 8M8 6h8"/>',
   trending: '<path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v6h-6"/>',

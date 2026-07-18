@@ -591,9 +591,13 @@
   border-radius: 16px;
   box-shadow: 0 14px 34px rgba(21, 41, 79, 0.08);
   gap: 22px;
-  grid-template-columns: 1.25fr 0.9fr;
+  grid-template-columns: 1.42fr 0.9fr;
   max-width: none;
   padding: 22px 24px;
+}
+
+.cs-voteband--hero .cs-voteband__cta .cs-btn {
+  white-space: nowrap;
 }
 
 .cs-voteband__inner {
@@ -655,6 +659,46 @@
 .cs-voteband__dates small {
   color: var(--cs-muted-2);
   font-size: 13px;
+}
+
+/* Two-phase layout (投票开始 | 投票截止), matching the candidate's reference. */
+.cs-voteband__body {
+  min-width: 0;
+}
+
+.cs-voteband__phases {
+  display: grid;
+  gap: 14px 26px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 12px;
+}
+
+.cs-voteband__phase-label {
+  align-items: center;
+  color: var(--cs-muted);
+  display: flex;
+  font-size: 13px;
+  font-weight: 600;
+  gap: 6px;
+}
+
+.cs-voteband__phase-label svg {
+  color: var(--cs-blue);
+  flex: none;
+}
+
+.cs-voteband__phase-date {
+  color: var(--cs-navy);
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.cs-voteband__phase-note {
+  color: var(--cs-muted-2);
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 2px;
 }
 
 .cs-voteband__cta {

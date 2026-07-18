@@ -38,18 +38,27 @@ export function HomePage() {
               <div className="cs-voteband__inner">
                 <div className="cs-voteband__info">
                   <span className="cs-voteband__badge">
-                    <Icon name="institution" size={26} stroke={1.7} />
+                    <Icon name="ballot" size={26} stroke={1.7} />
                   </span>
-                  <div>
+                  <div className="cs-voteband__body">
                     <div className="cs-voteband__title">{s.home.voteTitle}</div>
-                    <div className="cs-voteband__time">
-                      <Icon name="calendar" size={15} stroke={1.8} />
-                      {s.home.voteTimeLabel}
-                    </div>
-                    <div className="cs-voteband__dates">
-                      {s.home.voteDates}
-                      <br />
-                      <small>{s.home.voteNote}</small>
+                    <div className="cs-voteband__phases">
+                      <div className="cs-voteband__phase">
+                        <div className="cs-voteband__phase-label">
+                          <Icon name="calendar" size={14} stroke={1.8} />
+                          {s.home.voteStartLabel}
+                        </div>
+                        <div className="cs-voteband__phase-date">{s.home.voteStartDate}</div>
+                        <div className="cs-voteband__phase-note">{s.home.voteStartNote}</div>
+                      </div>
+                      <div className="cs-voteband__phase">
+                        <div className="cs-voteband__phase-label">
+                          <Icon name="clock" size={14} stroke={1.8} />
+                          {s.home.voteEndLabel}
+                        </div>
+                        <div className="cs-voteband__phase-date">{s.home.voteEndDate}</div>
+                        <div className="cs-voteband__phase-note">{s.home.voteEndNote}</div>
+                      </div>
                     </div>
                   </div>
                 </div>
