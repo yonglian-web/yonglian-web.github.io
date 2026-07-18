@@ -39,14 +39,13 @@ export function HomePage() {
             <div className="cs-hero__net" aria-hidden="true" />
             <Countdown />
             <div className="cs-hero__photo">
-              <img src={campaign.avatar} alt={campaign.name} />
+              <img src="/yong-lian-cutout.png" alt={campaign.name} />
             </div>
           </div>
         </div>
-      </section>
 
-      <section className="cs-voteband">
-        <div className="cs-voteband__inner">
+        <div className="cs-voteband cs-voteband--hero">
+          <div className="cs-voteband__inner">
           <div className="cs-voteband__info">
             <span className="cs-voteband__badge">
               <Icon name="institution" size={26} stroke={1.7} />
@@ -77,6 +76,7 @@ export function HomePage() {
               </Link>
             </div>
           </div>
+        </div>
         </div>
       </section>
 

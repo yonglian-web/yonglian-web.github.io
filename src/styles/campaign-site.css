@@ -442,7 +442,7 @@
   grid-template-columns: 1.12fr 0.88fr;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 54px 30px 44px;
+  padding: 54px 30px 18px;
   position: relative;
 }
 
@@ -523,33 +523,32 @@
 .cs-hero__net {
   background: url("/hero_background_network.png") center / cover no-repeat;
   border-radius: 50%;
-  height: 560px;
-  -webkit-mask-image: radial-gradient(circle, #000 52%, transparent 72%);
-  mask-image: radial-gradient(circle, #000 52%, transparent 72%);
-  opacity: 0.16;
+  height: 640px;
+  -webkit-mask-image: radial-gradient(circle, #000 50%, transparent 72%);
+  mask-image: radial-gradient(circle, #000 50%, transparent 72%);
+  opacity: 0.3;
   pointer-events: none;
   position: absolute;
-  right: -80px;
+  right: -70px;
   top: 50%;
-  transform: translateY(-48%);
-  width: 560px;
+  transform: translateY(-50%);
+  width: 640px;
   z-index: 0;
 }
 
+/* Cut-out portrait sitting directly on the hero (no frame), softly faded at the
+   bottom so it melts into the network background — matches the reference design. */
 .cs-hero__photo {
-  aspect-ratio: 3 / 4;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(21, 41, 79, 0.14);
-  overflow: hidden;
   position: relative;
-  width: min(100%, 318px);
+  width: min(100%, 430px);
   z-index: 1;
 }
 
 .cs-hero__photo img {
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 8%;
+  display: block;
+  height: auto;
+  -webkit-mask-image: linear-gradient(180deg, #000 85%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 85%, transparent 100%);
   width: 100%;
 }
 
@@ -587,6 +586,25 @@
   background: var(--cs-soft);
   border-bottom: 1px solid #e7eef6;
   border-top: 1px solid #e7eef6;
+}
+
+/* When it lives inside the hero: a rounded card on the hero background. */
+.cs-voteband--hero {
+  background: transparent;
+  border: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 30px 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.cs-voteband--hero .cs-voteband__inner {
+  background: #fff;
+  border: 1px solid #e3ecf5;
+  border-radius: 16px;
+  box-shadow: 0 14px 34px rgba(21, 41, 79, 0.08);
+  max-width: none;
 }
 
 .cs-voteband__inner {
