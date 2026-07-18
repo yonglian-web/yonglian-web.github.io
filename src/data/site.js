@@ -130,7 +130,8 @@ export const site = {
     honors: [
       'IEEE CASS Mac Van Valkenburg Award',
       'CASS Distinguished Service Award',
-      'IEEE Fellow (2020)',
+      'IEEE Fellow (2009)',
+      'Fellow, Canadian Academy of Engineering (2020)',
       'Multiple international conference service awards',
     ],
     serviceTitle: 'Selected IEEE service',

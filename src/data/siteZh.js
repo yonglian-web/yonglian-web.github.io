@@ -130,7 +130,8 @@ export const siteZh = {
     honors: [
       'IEEE CASS Mac Van Valkenburg Award',
       'CASS Distinguished Service Award',
-      'IEEE Fellow（2020）',
+      'IEEE Fellow（2009）',
+      '加拿大工程院院士（2020）',
       '多项国际会议服务与贡献奖',
     ],
     serviceTitle: '主要 IEEE 服务',
