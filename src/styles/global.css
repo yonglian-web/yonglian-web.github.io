@@ -257,7 +257,7 @@ img {
   align-items: center;
   display: grid;
   gap: clamp(2rem, 5vw, 3.5rem);
-  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
   margin: 0 auto;
   max-width: var(--content-max);
   position: relative;
