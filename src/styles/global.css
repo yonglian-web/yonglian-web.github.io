@@ -691,6 +691,17 @@ img {
   max-width: var(--content-max);
 }
 
+.site-footer__disclaimer {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #9aa8c0;
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.7;
+  margin: 1.75rem auto 0;
+  max-width: var(--content-max);
+  padding-top: 1.1rem;
+}
+
 .site-footer .brand__name {
   color: var(--color-paper);
   font-size: 1rem;

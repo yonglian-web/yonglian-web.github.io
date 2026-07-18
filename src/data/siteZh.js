@@ -200,10 +200,13 @@ export const siteZh = {
     { accent: 'orange', icon: 'star', label: '未来', text: '我将继续为每一位 IEEE 会员带来更多价值。' },
   ],
   countdown: {
-    before: '距离投票开始还有',
-    during: '距离投票结束还有',
+    beforeLead: '投票将于',
+    beforeTail: '后开始',
+    duringLead: '投票将于',
+    duringTail: '后截止',
     after: '本届投票已结束',
     unit: '天',
+    dateLead: '距离',
     openDate: '2026 年 8 月 17 日',
     closeDate: '2026 年 10 月 1 日',
   },
@@ -214,5 +217,8 @@ export const siteZh = {
     tagline2: 'Delivering More Value for Every IEEE Member',
     disclaimer:
       '本网站为 2026 年 IEEE 年度选举候选人连勇（Yong Lian）的个人竞选网站，未获得 IEEE 或任何 IEEE 组织单位的赞助、背书或批准；文中 IEEE 名称仅用于身份说明。投票资格与流程以 IEEE 官方选举页面为准。',
+    // IEEE candidate disclaimer — kept in English, shown on every page.
+    ieeeDisclaimer:
+      'The opinions expressed herein are the opinions of the author and not necessarily the opinions of IEEE.',
   },
 };

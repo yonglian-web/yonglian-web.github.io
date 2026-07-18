@@ -101,6 +101,7 @@ export function CampaignLayout({ children }) {
           </div>
         </div>
         <div className="cs-footer__disclaimer">{s.footer.disclaimer}</div>
+        <div className="cs-footer__disclaimer cs-footer__disclaimer--ieee">{s.footer.ieeeDisclaimer}</div>
       </footer>
     </div>
   );

@@ -512,19 +512,39 @@
 }
 
 .cs-hero__media {
-  min-height: 490px;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   position: relative;
 }
 
-.cs-hero__photo {
-  border-radius: 16px;
-  bottom: 0;
-  box-shadow: 0 20px 40px rgba(21, 41, 79, 0.14);
-  height: 490px;
-  overflow: hidden;
+/* Faint circuit/network graphic behind the photo — evokes the tech background
+   in the candidate's reference design. Masked to a soft circle, kept subtle. */
+.cs-hero__net {
+  background: url("/hero_background_network.png") center / cover no-repeat;
+  border-radius: 50%;
+  height: 560px;
+  -webkit-mask-image: radial-gradient(circle, #000 52%, transparent 72%);
+  mask-image: radial-gradient(circle, #000 52%, transparent 72%);
+  opacity: 0.16;
+  pointer-events: none;
   position: absolute;
-  right: 14px;
-  width: min(100%, 380px);
+  right: -80px;
+  top: 50%;
+  transform: translateY(-48%);
+  width: 560px;
+  z-index: 0;
+}
+
+.cs-hero__photo {
+  aspect-ratio: 3 / 4;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(21, 41, 79, 0.14);
+  overflow: hidden;
+  position: relative;
+  width: min(100%, 318px);
+  z-index: 1;
 }
 
 .cs-hero__photo img {
@@ -534,49 +554,33 @@
   width: 100%;
 }
 
+/* Plain right-aligned countdown text (no box), sitting above the photo. */
 .cs-countdown {
-  background: #fff;
-  border: 1px solid #e3e9f1;
-  border-radius: 14px;
-  box-shadow: 0 14px 34px rgba(21, 41, 79, 0.14);
-  min-width: 158px;
-  padding: 15px 22px;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  z-index: 3;
+  position: relative;
+  text-align: right;
+  z-index: 2;
 }
 
-.cs-countdown__label {
+.cs-countdown__line {
   align-items: center;
   color: var(--cs-muted);
   display: flex;
-  font-size: 12.5px;
+  font-size: 14px;
   font-weight: 500;
-  gap: 6px;
-  justify-content: center;
+  gap: 7px;
+  justify-content: flex-end;
 }
 
-.cs-countdown__num {
-  color: var(--cs-blue);
-  font-size: 44px;
-  font-weight: 900;
-  line-height: 1.1;
-  margin-top: 4px;
-}
-
-.cs-countdown__num span {
+.cs-countdown__line b {
   color: var(--cs-navy);
-  font-size: 17px;
-  font-weight: 700;
-  margin-left: 4px;
+  font-size: 16px;
+  font-weight: 800;
 }
 
 .cs-countdown__date {
   color: var(--cs-muted-2);
-  font-size: 12.5px;
-  margin-top: 2px;
+  font-size: 13px;
+  margin-top: 3px;
 }
 
 /* ---------- vote band (home) ---------- */
@@ -775,6 +779,12 @@
   font-weight: 700;
   line-height: 1.65;
   margin: 18px 0 0;
+}
+
+/* Standalone quote (why-running page has no photo beside it). */
+.cs-quote--wide {
+  margin: 0 auto;
+  max-width: 880px;
 }
 
 .cs-quote__photo {
@@ -1448,7 +1458,13 @@
   line-height: 1.7;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 18px 30px 30px;
+  padding: 18px 30px 10px;
+}
+
+.cs-footer__disclaimer--ieee {
+  border-top: 0;
+  font-style: italic;
+  padding: 0 30px 28px;
 }
 
 /* ---------- responsive (the source design is desktop-only) ---------- */
@@ -1511,24 +1527,24 @@
   }
 
   .cs-hero__media {
-    min-height: 0;
+    align-items: flex-start;
+  }
+
+  .cs-hero__net {
+    display: none;
   }
 
   .cs-hero__photo {
-    height: auto;
-    position: relative;
-    right: 0;
-    width: min(100%, 340px);
-  }
-
-  .cs-hero__photo img {
-    height: auto;
+    width: min(100%, 320px);
   }
 
   .cs-countdown {
-    position: absolute;
-    right: 6px;
-    top: 6px;
+    order: -1;
+    text-align: left;
+  }
+
+  .cs-countdown__line {
+    justify-content: flex-start;
   }
 
   .cs-doors,

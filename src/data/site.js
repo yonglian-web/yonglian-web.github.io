@@ -200,12 +200,15 @@ export const site = {
     { accent: 'orange', icon: 'star', label: 'Future', text: 'I will keep delivering more value for every IEEE member.' },
   ],
   countdown: {
-    before: 'Voting opens in',
-    during: 'Voting closes in',
+    beforeLead: 'Voting opens in',
+    beforeTail: '',
+    duringLead: 'Voting closes in',
+    duringTail: '',
     after: 'Voting has closed',
-    unit: ' days',
-    openDate: '17 August 2026',
-    closeDate: '1 October 2026',
+    unit: 'days',
+    dateLead: 'on',
+    openDate: 'August 17, 2026',
+    closeDate: 'October 1, 2026',
   },
   footer: {
     name: 'Yong (Peter) Lian',
@@ -214,5 +217,8 @@ export const site = {
     tagline2: '为每一位 IEEE 会员带来更多价值',
     disclaimer:
       'This is the personal campaign website of Yong (Peter) Lian, a candidate in the 2026 IEEE Annual Election. It is not sponsored, endorsed, or approved by IEEE or any IEEE organizational unit. IEEE names are used for identification only. Eligibility and procedures are governed by the official IEEE election page.',
+    // IEEE candidate disclaimer — shown on every page.
+    ieeeDisclaimer:
+      'The opinions expressed herein are the opinions of the author and not necessarily the opinions of IEEE.',
   },
 };

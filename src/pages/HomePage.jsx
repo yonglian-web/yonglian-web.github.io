@@ -36,6 +36,7 @@ export function HomePage() {
             </div>
           </div>
           <div className="cs-hero__media">
+            <div className="cs-hero__net" aria-hidden="true" />
             <Countdown />
             <div className="cs-hero__photo">
               <img src={campaign.avatar} alt={campaign.name} />

@@ -17,36 +17,44 @@ export function Countdown() {
     return () => clearInterval(id);
   }, []);
 
-  let label;
-  let num;
-  let unit = s.countdown.unit;
+  const c = s.countdown;
+  let lead;
+  let tail;
+  let num = null;
   let date;
   if (now < OPEN) {
-    label = s.countdown.before;
+    lead = c.beforeLead;
+    tail = c.beforeTail;
     num = Math.max(0, Math.ceil((OPEN - now) / DAY));
-    date = s.countdown.openDate;
+    date = c.openDate;
   } else if (now < CLOSE) {
-    label = s.countdown.during;
+    lead = c.duringLead;
+    tail = c.duringTail;
     num = Math.max(0, Math.ceil((CLOSE - now) / DAY));
-    date = s.countdown.closeDate;
+    date = c.closeDate;
   } else {
-    label = s.countdown.after;
-    num = '—';
-    unit = '';
-    date = s.countdown.closeDate;
+    date = c.closeDate;
   }
 
   return (
     <div className="cs-countdown">
-      <div className="cs-countdown__label">
-        <Icon name="calendar" size={14} stroke={1.8} />
-        {label}
+      <div className="cs-countdown__line">
+        <Icon name="calendar" size={15} stroke={1.8} />
+        {num !== null ? (
+          <span>
+            {lead}{' '}
+            <b>
+              {num} {c.unit}
+            </b>
+            {tail}
+          </span>
+        ) : (
+          <span>{c.after}</span>
+        )}
       </div>
-      <div className="cs-countdown__num">
-        {num}
-        {unit ? <span>{unit}</span> : null}
+      <div className="cs-countdown__date">
+        {c.dateLead} {date}
       </div>
-      <div className="cs-countdown__date">{date}</div>
     </div>
   );
 }

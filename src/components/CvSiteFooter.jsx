@@ -14,6 +14,10 @@ export function CvSiteFooter({ campaign }) {
           {campaign.contactPhone ? <a href={`tel:${campaign.contactPhone}`}>{campaign.contactPhone}</a> : null}
         </section>
       </div>
+      {/* IEEE candidate disclaimer — shown on every page. */}
+      <p className="site-footer__disclaimer">
+        The opinions expressed herein are the opinions of the author and not necessarily the opinions of IEEE.
+      </p>
     </footer>
   );
 }
