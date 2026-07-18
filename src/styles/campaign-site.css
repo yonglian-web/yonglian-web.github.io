@@ -204,30 +204,13 @@
   text-decoration: none;
 }
 
+/* Official IEEE logo (provided by the candidate, per IEEE's instruction).
+   Used as-is per IEEE brand rules — no recolour, no container shape. */
 .cs-logo__mark {
   flex: none;
-  height: 40px;
-  position: relative;
-  width: 40px;
-}
-
-.cs-logo__mark::before {
-  background: linear-gradient(135deg, #0a74b3, #003f6b);
-  border-radius: 50%;
-  content: "";
-  inset: 0;
-  position: absolute;
-}
-
-.cs-logo__mark span {
-  align-items: center;
-  color: #fff;
-  display: flex;
-  font-size: 16px;
-  font-weight: 800;
-  inset: 0;
-  justify-content: center;
-  position: absolute;
+  height: 42px;
+  object-fit: contain;
+  width: 42px;
 }
 
 .cs-logo__text {

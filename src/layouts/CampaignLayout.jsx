@@ -32,9 +32,7 @@ export function CampaignLayout({ children }) {
       <header className="cs-header">
         <div className="cs-header__inner">
           <Link className="cs-logo" to="/" onClick={() => setOpen(false)}>
-            <span className="cs-logo__mark">
-              <span>连</span>
-            </span>
+            <img className="cs-logo__mark" src="/ieee-logo.png" alt="IEEE" />
             <span className="cs-logo__text">
               <span className="cs-logo__name">
                 {s.brand.name} {s.brand.nameEn ? <span>{s.brand.nameEn}</span> : null}
