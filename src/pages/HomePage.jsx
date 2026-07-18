@@ -32,10 +32,7 @@ export function HomePage() {
                 {s.home.ctaWhy}
                 <Icon name="arrow" size={17} stroke={2} />
               </Link>
-              <a className="cs-btn cs-btn--ghost" href={VOTE_URL} rel="noopener" target="_blank">
-                <Icon name="play" size={16} />
-                {s.home.ctaVideo}
-              </a>
+              {/* "Watch 60s video" button removed — no video available yet. */}
             </div>
           </div>
           <div className="cs-hero__media">

@@ -1,5 +1,4 @@
 import { useSite } from '../data/useSite.js';
-import { Icon } from '../components/Icon.jsx';
 
 export function WhyMePage() {
   const s = useSite();
@@ -14,7 +13,7 @@ export function WhyMePage() {
         </div>
       </div>
 
-      <section className="cs-section" style={{ paddingBottom: 0 }}>
+      <section className="cs-section">
         <div className="cs-card cs-stats">
           {p.stats.map((stat, i) => (
             <div style={{ display: 'contents' }} key={i}>
@@ -28,35 +27,15 @@ export function WhyMePage() {
         </div>
 
         <h3 className="cs-h3" style={{ marginTop: '52px' }}>
-          {p.achTitle}
+          {p.serviceTitle}
         </h3>
-        <div className="cs-ach-grid">
-          {p.achievements.map((a, i) => (
-            <div className="cs-card cs-ach" key={i}>
-              <span className={`cs-chip cs-chip--sm cs-chip--${a.accent}`}>
-                <Icon name={a.icon} size={24} stroke={1.7} />
-              </span>
-              <div className="cs-ach__title">{a.title}</div>
-              <p className="cs-ach__text">{a.text}</p>
-              <div className="cs-ach__slot">{a.slot}</div>
+        <div className="cs-card cs-service">
+          {p.serviceList.map((item, i) => (
+            <div className="cs-service__item" key={i}>
+              <span className="cs-service__year">{item.year}</span>
+              <span className="cs-service__text">{item.text}</span>
             </div>
           ))}
-        </div>
-
-        <h3 className="cs-h3" style={{ marginTop: '56px' }}>
-          {p.timelineTitle}
-        </h3>
-        <div className="cs-timeline">
-          <div className="cs-timeline__rail" aria-hidden="true" />
-          <div className="cs-timeline__nodes">
-            {p.timeline.map((t, i) => (
-              <div className="cs-tl" key={i}>
-                <div className="cs-tl__dot" />
-                <div className="cs-tl__year">{t.year}</div>
-                <div className="cs-tl__text">{t.text}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
     </div>

@@ -778,16 +778,17 @@
 }
 
 .cs-quote__photo {
+  aspect-ratio: 3 / 4;
+  align-self: stretch;
   border-radius: 18px;
   box-shadow: 0 20px 40px rgba(21, 41, 79, 0.15);
-  height: 390px;
   overflow: hidden;
 }
 
 .cs-quote__photo img {
   height: 100%;
   object-fit: cover;
-  object-position: 50% 6%;
+  object-position: 50% 12%;
   width: 100%;
 }
 
@@ -968,6 +969,49 @@
   font-size: 13px;
   line-height: 1.55;
   margin-top: 5px;
+}
+
+/* ---------- service list (why-me) ---------- */
+.cs-service {
+  margin-top: 30px;
+  padding: 10px 30px;
+}
+
+.cs-service__item {
+  align-items: baseline;
+  border-bottom: 1px solid #eef2f7;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 108px 1fr;
+  padding: 13px 0;
+}
+
+.cs-service__item:last-child {
+  border-bottom: 0;
+}
+
+.cs-service__year {
+  color: var(--cs-blue);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cs-service__text {
+  color: var(--cs-body);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+@media (max-width: 560px) {
+  .cs-service {
+    padding: 10px 20px;
+  }
+
+  .cs-service__item {
+    gap: 2px;
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---------- plan ---------- */
