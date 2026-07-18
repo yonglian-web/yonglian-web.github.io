@@ -14,7 +14,7 @@ export const siteZh = {
   brand: {
     name: '连勇',
     nameEn: 'Yong (Peter) Lian',
-    role: '2027 IEEE TA Vice President-Elect · 候选人',
+    role: '2027 IEEE TA VP-Elect Candidate',
   },
   home: {
     title: '为每一位 <span class="cs-accent">IEEE</span> 会员<br>带来更多价值',
@@ -64,10 +64,10 @@ export const siteZh = {
     sub: '35 年 IEEE 志愿服务与贡献',
     stats: [
       { value: '35+', label: '年 IEEE 志愿服务' },
-      { value: '40+', label: '项 领导职务' },
-      { value: '130+', label: '篇 期刊论文' },
-      { value: '230+', label: '篇 会议论文' },
-      { value: '9,600+', label: '次 论文引用' },
+      { value: '50+', label: '领导职务' },
+      { value: '3', label: '服务三大理事会：TA、PSPB、MGA' },
+      { value: '35+', label: '主办国际会议' },
+      { value: '1700+', label: 'ISCAS 2026 参会人数' },
     ],
     achTitle: '四大方面的成果与影响',
     achievements: [
@@ -78,7 +78,6 @@ export const siteZh = {
     ],
     serviceTitle: '主要社会服务',
     serviceList: [
-      { year: '2021.06–', text: '国务院学位委员会集成电路科学与工程学科评议组成员' },
       { year: '2026.01–', text: 'IEEE Fellow Committee 副主席（国内首位）' },
       { year: '2026.01–', text: 'IEEE 技术活动候任副主席 2026 年候选人（IEEE Technical Activities VP-Elect 2026 Candidate）' },
       { year: '2026.01–', text: 'IEEE 创新委员会委员' },
@@ -163,10 +162,10 @@ export const siteZh = {
     ctaNote: '投票时间：2026 年 8 月 17 日 – 2026 年 10 月 1 日（中午 12:00 美国东部时间）',
     faqTitle: '常见问题（FAQ）',
     faq: [
-      { q: '谁可以投票？', a: '所有具备投票资格的 IEEE 付费会员均可参与投票。' },
+      { q: '谁可以投票？', a: '所有具备投票资格的 IEEE 学会会员。' },
       { q: '我会收到投票提醒吗？', a: '会的，IEEE 将通过邮件向您发送投票通知与专属链接。' },
-      { q: '可以更改投票吗？', a: '在投票期内，您可以重新登录并更新自己的投票。' },
-      { q: '投票收费吗？', a: '不需要，投票或重新投票均不会产生任何费用。' },
+      { q: '可以更改投票吗？', a: '投票一旦提交后不可以更改。' },
+      { q: '学生会员可以投票吗？', a: '根据 IEEE 的最新规定，学生会员不参与年度选举投票。' },
     ],
   },
   about: {
@@ -181,7 +180,7 @@ export const siteZh = {
     honorsTitle: '主要荣誉',
     honors: [
       'IEEE CASS Mac Van Valkenburg Award',
-      'CASS Distinguished Service Award',
+      'IEEE CASS Distinguished Service Award',
       'IEEE Fellow（2009）',
       '加拿大工程院院士（2020）',
       '多项国际会议服务与贡献奖',

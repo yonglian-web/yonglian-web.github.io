@@ -14,7 +14,7 @@ export const site = {
   brand: {
     name: 'Yong (Peter) Lian',
     nameEn: '',
-    role: 'Candidate · 2027 IEEE TA Vice President-Elect',
+    role: '2027 IEEE TA VP-Elect Candidate',
   },
   home: {
     title: 'Delivering more value<br>for every <span class="cs-accent">IEEE</span> member',
@@ -64,10 +64,10 @@ export const site = {
     sub: '35 years of IEEE volunteer service and contribution',
     stats: [
       { value: '35+', label: 'years of IEEE service' },
-      { value: '40+', label: 'leadership roles' },
-      { value: '130+', label: 'journal papers' },
-      { value: '230+', label: 'conference papers' },
-      { value: '9,600+', label: 'citations' },
+      { value: '50+', label: 'leadership roles' },
+      { value: '3', label: 'IEEE boards served: TA, PSPB, MGA' },
+      { value: '35+', label: 'international conferences organized' },
+      { value: '1700+', label: 'ISCAS 2026 attendees' },
     ],
     achTitle: 'A record across four dimensions',
     achievements: [
@@ -78,7 +78,6 @@ export const site = {
     ],
     serviceTitle: 'Selected professional service',
     serviceList: [
-      { year: '2021.06–', text: 'Member, Integrated Circuits Science & Engineering Appraisal Group, Academic Degrees Committee of the State Council (China)' },
       { year: '2026.01–', text: 'Vice Chair, IEEE Fellow Committee (first from China)' },
       { year: '2026.01–', text: 'IEEE Technical Activities VP-Elect 2026 Candidate' },
       { year: '2026.01–', text: 'Member, IEEE Innovation Committee' },
@@ -163,10 +162,10 @@ export const site = {
     ctaNote: 'Voting: 17 August 2026 – 1 October 2026 (12:00 noon US Eastern Time)',
     faqTitle: 'Frequently asked questions',
     faq: [
-      { q: 'Who can vote?', a: 'All IEEE members in good standing who are eligible to vote may take part.' },
+      { q: 'Who can vote?', a: 'All eligible IEEE Society members.' },
       { q: 'Will I be reminded?', a: 'Yes — IEEE emails you a voting notice with your personal ballot link.' },
-      { q: 'Can I change my vote?', a: 'During the voting period you can log back in and update your vote.' },
-      { q: 'Does voting cost anything?', a: 'No. Voting, or re-voting, is completely free.' },
+      { q: 'Can I change my vote?', a: 'Once submitted, a vote cannot be changed.' },
+      { q: 'Can Student members vote?', a: 'Under IEEE’s current rules, Student members do not take part in the annual election.' },
     ],
   },
   about: {
@@ -181,7 +180,7 @@ export const site = {
     honorsTitle: 'Selected honors',
     honors: [
       'IEEE CASS Mac Van Valkenburg Award',
-      'CASS Distinguished Service Award',
+      'IEEE CASS Distinguished Service Award',
       'IEEE Fellow (2009)',
       'Fellow, Canadian Academy of Engineering (2020)',
       'Multiple international conference service awards',

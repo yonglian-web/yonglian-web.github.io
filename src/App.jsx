@@ -8,7 +8,6 @@ import { WhyRunningPage } from './pages/WhyRunningPage.jsx';
 import { WhyMePage } from './pages/WhyMePage.jsx';
 import { PlanPage } from './pages/PlanPage.jsx';
 import { HowToVotePage } from './pages/HowToVotePage.jsx';
-import { AboutPage } from './pages/AboutPage.jsx';
 import { ExperiencePage } from './pages/ExperiencePage.jsx';
 import { HonorsPage } from './pages/HonorsPage.jsx';
 import { ProfessionalActivitiesPage } from './pages/ProfessionalActivitiesPage.jsx';
@@ -69,14 +68,6 @@ export function App() {
           element={
             <CampaignLayout>
               <HowToVotePage />
-            </CampaignLayout>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <CampaignLayout>
-              <AboutPage />
             </CampaignLayout>
           }
         />

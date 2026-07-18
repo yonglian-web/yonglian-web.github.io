@@ -16,9 +16,6 @@ export function WhyRunningPage() {
 
       <section className="cs-section" style={{ paddingTop: 0 }}>
         <div className="cs-quote cs-quote--wide">
-          <svg width="44" height="44" viewBox="0 0 24 24" className="cs-quote__mark" fill="currentColor" aria-hidden="true">
-            <path d="M6.5 6h4.5v5c0 3-2 5.2-5 5.4v-2.3c1.3-.2 2.2-1.1 2.3-2.6H6.5z M14 6h4.5v5c0 3-2 5.2-5 5.4v-2.3c1.3-.2 2.2-1.1 2.3-2.6H14z" />
-          </svg>
           <p dangerouslySetInnerHTML={{ __html: p.quote }} />
         </div>
 

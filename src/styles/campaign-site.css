@@ -213,11 +213,10 @@
 
 .cs-logo__mark::before {
   background: linear-gradient(135deg, #0a74b3, #003f6b);
-  border-radius: 8px;
+  border-radius: 50%;
   content: "";
   inset: 0;
   position: absolute;
-  transform: rotate(45deg);
 }
 
 .cs-logo__mark span {
@@ -781,10 +780,13 @@
   margin: 18px 0 0;
 }
 
-/* Standalone quote (why-running page has no photo beside it). */
+/* Standalone quote (why-running page): full-width, no quote mark. */
 .cs-quote--wide {
-  margin: 0 auto;
-  max-width: 880px;
+  max-width: none;
+}
+
+.cs-quote--wide p {
+  margin: 0;
 }
 
 .cs-quote__photo {

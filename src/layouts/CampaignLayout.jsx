@@ -7,13 +7,15 @@ import { LanguageToggle } from '../components/LanguageToggle.jsx';
 const VOTE_URL =
   'https://www.ieee.org/about/corporate/election/technical-activities#yong-peter-lian12?utm_source=website&utm_medium=organic&utm_campaign=2026-candidate-video-lian-bio';
 
+// "关于连勇" links straight into the personal academic site (Personal Website),
+// which replaces the old campaign About page.
 const navItems = [
   { key: 'home', to: '/' },
   { key: 'whyRun', to: '/why-running' },
   { key: 'whyMe', to: '/why-me' },
   { key: 'what', to: '/plan' },
   { key: 'howVote', to: '/how-to-vote' },
-  { key: 'about', to: '/about' },
+  { key: 'about', to: '/honors' },
 ];
 
 // Election-site chrome, migrated 1:1 from the candidate's Claude Design: sticky
