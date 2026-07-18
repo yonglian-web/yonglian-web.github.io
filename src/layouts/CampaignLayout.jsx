@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useSite } from '../data/useSite.js';
-import { Icon } from '../components/Icon.jsx';
 import { LanguageToggle } from '../components/LanguageToggle.jsx';
 
 const VOTE_URL =
@@ -71,22 +70,6 @@ export function CampaignLayout({ children }) {
       </header>
 
       <main key={pathname}>{children}</main>
-
-      <section className="cs-ptf">
-        <div className="cs-ptf__inner">
-          {s.ptf.map((cell) => (
-            <div className="cs-ptf__cell" key={cell.label}>
-              <span className={`cs-ptf__chip cs-chip--${cell.accent}`}>
-                <Icon name={cell.icon} size={22} stroke={1.8} />
-              </span>
-              <div>
-                <div className="cs-ptf__label">{cell.label}</div>
-                <div className="cs-ptf__text">{cell.text}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <footer className="cs-footer">
         <div className="cs-footer__inner">
