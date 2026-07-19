@@ -1591,12 +1591,12 @@
 
   .cs-hero__photo {
     margin-right: 0;
-    order: -1;
+    order: 0;
     width: min(100%, 300px);
   }
 
   .cs-countdown {
-    order: 0;
+    order: -1;
     text-align: center;
   }
 
@@ -1688,9 +1688,41 @@
   .cs-doors,
   .cs-vision-grid,
   .cs-ach-grid,
-  .cs-promise-grid,
-  .cs-reasons {
+  .cs-promise-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Reasons: two per row on phones (one per row looked too empty). */
+  .cs-reasons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Quote: smaller so each line doesn't wrap to two on a phone. */
+  .cs-quote {
+    padding: 24px 22px 26px;
+  }
+
+  .cs-quote p {
+    font-size: 20px;
+  }
+
+  /* Vote band: badge + title on row 1, the two date phases full-width on row 2,
+     then the CTA below — so the dates aren't clipped on a narrow screen. */
+  .cs-voteband--hero .cs-voteband__body {
+    display: contents;
+  }
+
+  .cs-voteband--hero .cs-voteband__info {
+    align-items: center;
+    column-gap: 14px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: 14px;
+  }
+
+  .cs-voteband--hero .cs-voteband__phases {
+    grid-column: 1 / -1;
+    margin-top: 0;
   }
 
   .cs-stat {
