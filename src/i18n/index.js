@@ -28,6 +28,21 @@ i18n
     returnEmptyString: false,
   });
 
+// Fixed-English instance for the Personal Website (academic CV). It ignores the
+// campaign site's language toggle so the CV is always English — the CV content is
+// English-only, so a Chinese label + English body would look half-translated.
+// NOTE: no `.use(initReactI18next)` here — that would re-bind the GLOBAL react
+// default to this instance and turn the whole app English. The CV subtree gets it
+// via <I18nextProvider i18n={cvI18n}> in CvLayout instead.
+export const cvI18n = i18n.createInstance();
+cvI18n.init({
+  resources: { en: { translation: en } },
+  lng: 'en',
+  fallbackLng: 'en',
+  interpolation: { escapeValue: false },
+  returnEmptyString: false,
+});
+
 // Keep <html lang> in sync — drives the :lang(zh) CJK font fallback too.
 const syncHtmlLang = (lng) => {
   document.documentElement.lang = String(lng || 'en').startsWith('zh') ? 'zh' : 'en';

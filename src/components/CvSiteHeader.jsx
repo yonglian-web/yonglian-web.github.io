@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { LanguageToggle } from './LanguageToggle.jsx';
 
+// English-only Personal Website — no language toggle (the CV content is English).
 export function CvSiteHeader({ campaign, navItems }) {
   const { t } = useTranslation();
 
@@ -13,7 +13,6 @@ export function CvSiteHeader({ campaign, navItems }) {
             <span className="brand__name">{campaign.displayName}</span>
           </span>
         </Link>
-        <LanguageToggle />
       </div>
 
       <nav className="template-switcher" aria-label="Site navigation">
