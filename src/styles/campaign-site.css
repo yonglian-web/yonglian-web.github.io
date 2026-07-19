@@ -1579,8 +1579,10 @@
     font-size: 40px;
   }
 
+  /* Mobile hero: portrait on top, then the headline block, then the vote band. */
   .cs-hero__media {
-    align-items: flex-start;
+    align-items: center;
+    order: -1;
   }
 
   .cs-hero__net {
@@ -1589,16 +1591,24 @@
 
   .cs-hero__photo {
     margin-right: 0;
-    width: min(100%, 320px);
+    order: -1;
+    width: min(100%, 300px);
   }
 
   .cs-countdown {
-    order: -1;
-    text-align: left;
+    order: 0;
+    text-align: center;
   }
 
   .cs-countdown__line {
-    justify-content: flex-start;
+    justify-content: center;
+  }
+
+  /* Vote band stacks vertically: info block, then the CTA button at the bottom
+     (the desktop 2-column card would otherwise overflow a phone). */
+  .cs-voteband--hero .cs-voteband__inner {
+    gap: 16px;
+    grid-template-columns: 1fr;
   }
 
   .cs-doors,
