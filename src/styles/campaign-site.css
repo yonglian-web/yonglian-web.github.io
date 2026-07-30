@@ -302,26 +302,53 @@
 }
 
 /* language toggle (shared component) */
-.campaign-site .lang-toggle {
+.campaign-site .lang-select {
   display: inline-flex;
-  gap: 2px;
+  position: relative;
 }
 
-.campaign-site .lang-toggle button {
-  background: none;
-  border: none;
-  border-radius: 6px;
-  color: #4a5a74;
+.campaign-site .lang-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #dbe4ef;
+  border-radius: 8px;
+  color: var(--cs-navy);
   cursor: pointer;
   font-family: inherit;
   font-size: 13.5px;
   font-weight: 600;
-  padding: 5px 9px;
+  padding: 6px 28px 6px 12px;
 }
 
-.campaign-site .lang-toggle button.is-active {
-  background: #eaf2fb;
-  color: var(--cs-blue);
+.campaign-site .lang-select select:hover {
+  border-color: var(--cs-blue);
+}
+
+/* dropdown chevron */
+.campaign-site .lang-select::after {
+  border-bottom: 2px solid #7286a3;
+  border-right: 2px solid #7286a3;
+  content: "";
+  height: 6px;
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 45%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /* ---------- interior page banner ---------- */
@@ -1562,7 +1589,7 @@
     margin-top: 6px;
   }
 
-  .campaign-site .lang-toggle {
+  .campaign-site .lang-select {
     padding: 6px 0;
   }
 }

@@ -13,8 +13,11 @@ i18n
       zh: { translation: zh },
     },
     fallbackLng: 'en',
-    supportedLngs: ['en', 'zh'],
-    nonExplicitSupportedLngs: true, // zh-CN / zh-TW / zh-Hans → zh
+    // Election site is available in these; the campaign prose comes from useSite's
+    // dataset swap (not i18n resources), so listing a lang here is enough for the
+    // detector to resolve it. Anything else (e.g. a Thai browser) → English.
+    supportedLngs: ['en', 'zh', 'fr', 'es', 'it', 'ja', 'ko'],
+    nonExplicitSupportedLngs: true, // fr-FR → fr, zh-CN → zh, ja-JP → ja …
     load: 'languageOnly', // en-US → en, zh-CN → zh
     detection: {
       // querystring first so ?lng=en / ?lng=zh can force a language for testing;
