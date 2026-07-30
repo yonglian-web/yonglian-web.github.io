@@ -125,7 +125,5 @@ export const siteEs = {
     role: 'Candidato · Vicepresidente electo 2027 de Actividades Técnicas del IEEE',
     tagline1: 'Aportar más valor a cada miembro del IEEE',
     tagline2: 'Delivering More Value for Every IEEE Member',
-    disclaimer:
-      'Este es el sitio web de campaña personal de Yong (Peter) Lian, candidato en la Elección Anual 2026 del IEEE. No está patrocinado, respaldado ni aprobado por el IEEE ni por ninguna de sus unidades organizativas. Los nombres del IEEE se usan solo con fines de identificación. La elegibilidad y los procedimientos se rigen por la página oficial de elecciones del IEEE.',
   },
 };

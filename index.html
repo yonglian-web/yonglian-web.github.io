@@ -3,11 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>Yong (Peter) Lian | IEEE Fellow, Professor &amp; 2027 IEEE TA VP-Elect Candidate</title>
     <meta
       name="description"
-      content="A reusable campaign website template for academic and professional elections."
+      content="Official website of Yong (Peter) Lian — IEEE Fellow, Professor at York University, and candidate for 2027 IEEE Technical Activities Vice President-Elect. 35+ years of IEEE service in circuits, systems and biomedical electronics."
     />
-    <title>Yong Lian for IEEE Technical Activities Vice President</title>
+    <meta name="author" content="Yong (Peter) Lian" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#173E7C" />
+    <link rel="canonical" href="https://yonglian.org/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Yong (Peter) Lian" />
+    <meta property="og:title" content="Yong (Peter) Lian | IEEE Fellow, Professor & 2027 IEEE TA VP-Elect Candidate" />
+    <meta
+      property="og:description"
+      content="Official website of Yong (Peter) Lian — IEEE Fellow, Professor at York University, and candidate for 2027 IEEE Technical Activities Vice President-Elect."
+    />
+    <meta property="og:url" content="https://yonglian.org/" />
+    <meta property="og:image" content="https://yonglian.org/yong-lian.jpg" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Yong (Peter) Lian | IEEE Fellow, Professor & 2027 IEEE TA VP-Elect Candidate" />
+    <meta
+      name="twitter:description"
+      content="Official website of Yong (Peter) Lian — IEEE Fellow, Professor at York University, candidate for 2027 IEEE Technical Activities Vice President-Elect."
+    />
+    <meta name="twitter:image" content="https://yonglian.org/yong-lian.jpg" />
+
+    <!-- Structured data: who this site is about (helps Google link the site to the person) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://yonglian.org/#person",
+            "name": "Yong (Peter) Lian",
+            "alternateName": ["Yong Lian", "Peter Lian", "连勇"],
+            "url": "https://yonglian.org/",
+            "image": "https://yonglian.org/yong-lian.jpg",
+            "jobTitle": "Professor",
+            "worksFor": {
+              "@type": "CollegeOrUniversity",
+              "name": "York University",
+              "department": "Lassonde School of Engineering, Department of Electrical Engineering and Computer Science"
+            },
+            "alumniOf": [
+              { "@type": "CollegeOrUniversity", "name": "National University of Singapore" },
+              { "@type": "CollegeOrUniversity", "name": "Shanghai Jiao Tong University" }
+            ],
+            "award": [
+              "IEEE Fellow (2009)",
+              "Fellow, Canadian Academy of Engineering (2020)",
+              "Fellow, Academy of Engineering Singapore (2012)"
+            ],
+            "knowsAbout": [
+              "Biomedical Circuits and Systems",
+              "Low-power Integrated Circuits",
+              "Circuits and Systems",
+              "Digital Signal Processing"
+            ],
+            "sameAs": [
+              "https://scholar.google.com/citations?user=s7dD018AAAAJ&hl=en"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://yonglian.org/#website",
+            "url": "https://yonglian.org/",
+            "name": "Yong (Peter) Lian — Official Website",
+            "about": { "@id": "https://yonglian.org/#person" },
+            "inLanguage": "en"
+          }
+        ]
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,7 +101,28 @@
     />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Crawlable fallback: real content before/without JS render -->
+      <noscript>
+        <h1>Yong (Peter) Lian</h1>
+        <p>
+          Yong (Peter) Lian is an <strong>IEEE Fellow</strong> and
+          <strong>Professor</strong> in the Department of Electrical Engineering
+          and Computer Science, Lassonde School of Engineering,
+          <strong>York University</strong>, Canada. He previously served as
+          Provost's Chair Professor at the
+          <strong>National University of Singapore</strong>. His research spans
+          biomedical circuits and systems, low-power integrated circuits, and
+          digital signal processing. He is a candidate for
+          <strong>2027 IEEE Technical Activities Vice President-Elect</strong>.
+        </p>
+        <p>
+          <a href="https://scholar.google.com/citations?user=s7dD018AAAAJ&amp;hl=en"
+            >Google Scholar profile</a
+          >
+        </p>
+      </noscript>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
     <!-- Cloudflare Web Analytics (privacy-friendly, no cookies) -->
     <script

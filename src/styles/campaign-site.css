@@ -303,8 +303,18 @@
 
 /* language toggle (shared component) */
 .campaign-site .lang-select {
+  align-items: center;
   display: inline-flex;
   position: relative;
+}
+
+/* national flag of the current language — signals the language selector */
+.campaign-site .lang-select__flag {
+  font-size: 15px;
+  left: 10px;
+  line-height: 1;
+  pointer-events: none;
+  position: absolute;
 }
 
 .campaign-site .lang-select select {
@@ -318,7 +328,7 @@
   font-family: inherit;
   font-size: 13.5px;
   font-weight: 600;
-  padding: 6px 28px 6px 12px;
+  padding: 6px 28px 6px 33px;
 }
 
 .campaign-site .lang-select select:hover {
@@ -1498,7 +1508,7 @@
 /* ---------- footer ---------- */
 .cs-footer {
   background: #0f2444;
-  color: #c3d1e4;
+  color: #fff;
 }
 
 .cs-footer__inner {
@@ -1519,32 +1529,46 @@
 }
 
 .cs-footer__role {
-  color: #8ea3bf;
+  color: #fff;
   font-size: 13px;
   margin-top: 4px;
 }
 
 .cs-footer__tag {
-  color: #8ea3bf;
+  color: #fff;
   font-size: 13px;
   line-height: 1.7;
   text-align: right;
 }
 
-.cs-footer__disclaimer {
+/* Contact email — sits directly under the identity row, single divider line. */
+.cs-footer__email {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #7f93b3;
+  color: #fff;
+  font-size: 13px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 18px 30px 8px;
+}
+
+.cs-footer__email a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Both long disclaimers (personal + translation) share this exact format. */
+.cs-footer__disclaimer {
+  color: #fff;
   font-size: 12px;
   line-height: 1.7;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 18px 30px 10px;
+  padding: 6px 30px;
 }
 
 .cs-footer__disclaimer--ieee {
-  border-top: 0;
   font-style: italic;
-  padding: 0 30px 28px;
+  padding-bottom: 28px;
 }
 
 /* ---------- responsive (the source design is desktop-only) ---------- */

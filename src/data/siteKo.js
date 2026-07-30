@@ -125,7 +125,5 @@ export const siteKo = {
     role: '2027년 IEEE 기술활동 담당 부회장 후보',
     tagline1: '모든 IEEE 회원에게 더 큰 가치를',
     tagline2: 'Delivering More Value for Every IEEE Member',
-    disclaimer:
-      '이 사이트는 2026년 IEEE 연례 선거 후보자 Yong (Peter) Lian의 개인 선거 운동 웹사이트입니다. IEEE 또는 그 산하 조직의 후원·보증·승인을 받지 않았습니다. IEEE 명칭은 식별 목적으로만 사용됩니다. 투표 자격과 절차는 IEEE 공식 선거 페이지를 따릅니다.',
   },
 };

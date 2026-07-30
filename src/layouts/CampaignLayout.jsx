@@ -83,7 +83,17 @@ export function CampaignLayout({ children }) {
             {s.footer.tagline2}
           </div>
         </div>
+        {s.footer.email ? (
+          <div className="cs-footer__email">
+            <strong>Contact email:</strong> <a href={`mailto:${s.footer.email}`}>{s.footer.email}</a>
+          </div>
+        ) : null}
         <div className="cs-footer__disclaimer">{s.footer.disclaimer}</div>
+        {s.footer.translationDisclaimer ? (
+          <div className="cs-footer__disclaimer cs-footer__disclaimer--translation">
+            <strong>{s.footer.translationTitle}</strong> {s.footer.translationDisclaimer}
+          </div>
+        ) : null}
         <div className="cs-footer__disclaimer cs-footer__disclaimer--ieee">{s.footer.ieeeDisclaimer}</div>
       </footer>
     </div>
