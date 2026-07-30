@@ -1,15 +1,14 @@
 import { useTranslation } from 'react-i18next';
 
-// Election site languages. Each label shows the native name plus its English
-// name so it's clear what each option is (e.g. "中文 (Chinese)").
+// Election site languages. Each label is written in its own language.
 const LANGS = [
   { code: 'en', label: 'English' },
-  { code: 'zh', label: '中文 (Chinese)' },
-  { code: 'fr', label: 'Français (French)' },
-  { code: 'es', label: 'Español (Spanish)' },
-  { code: 'it', label: 'Italiano (Italian)' },
-  { code: 'ja', label: '日本語 (Japanese)' },
-  { code: 'ko', label: '한국어 (Korean)' },
+  { code: 'zh', label: '中文' },
+  { code: 'fr', label: 'Français' },
+  { code: 'es', label: 'Español' },
+  { code: 'it', label: 'Italiano' },
+  { code: 'ja', label: '日本語' },
+  { code: 'ko', label: '한국어' },
 ];
 
 const CODES = LANGS.map((l) => l.code);
