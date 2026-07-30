@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Flag } from './Flag.jsx';
 
 // Election site languages. Each label is written in its own language.
 const LANGS = [
@@ -13,17 +14,6 @@ const LANGS = [
 
 const CODES = LANGS.map((l) => l.code);
 
-// National flag shown on the left, matching the current language.
-const FLAGS = {
-  en: '🇬🇧',
-  zh: '🇨🇳',
-  fr: '🇫🇷',
-  es: '🇪🇸',
-  it: '🇮🇹',
-  ja: '🇯🇵',
-  ko: '🇰🇷',
-};
-
 export function LanguageToggle() {
   const { i18n } = useTranslation();
   const resolved = String(i18n.language || 'en').slice(0, 2);
@@ -32,9 +22,7 @@ export function LanguageToggle() {
   return (
     <label className="lang-select">
       <span className="sr-only">Language / 语言</span>
-      <span className="lang-select__flag" aria-hidden="true">
-        {FLAGS[current]}
-      </span>
+      <Flag code={current} />
       <select
         aria-label="Language / 语言"
         value={current}

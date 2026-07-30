@@ -147,7 +147,7 @@ export const site = {
       { accent: 'blue', icon: 'usersPair', num: '01', title: 'Strengthen communities', why: 'Technology is increasingly cross-disciplinary and needs more collaboration and sharing.', gains: ['More high-quality conferences and activities', 'More cross-domain collaboration', 'Stronger global impact'] },
       { accent: 'green', icon: 'heartCheck', num: '02', title: 'Grow volunteers', why: 'Volunteers are IEEE’s core strength and deserve better support.', gains: ['Better tools and resources', 'More growth and training', 'A stronger sense of belonging'] },
       { accent: 'purple', icon: 'barsAlt', num: '03', title: 'Raise activity value', why: 'Improve the quality and impact of conferences, publications, education and standards.', gains: ['Higher-quality technical content', 'Greater academic and industry impact', 'A better member experience'] },
-      { accent: 'orange', icon: 'lightbulb', num: '04', title: 'Innovate faster', why: 'Emerging technologies keep arriving; IEEE must respond to members faster.', gains: ['Faster access to frontier technology', 'More ways to engage in innovation', 'Stronger industry connections'] },
+      { accent: 'orange', icon: 'lightbulb', num: '04', title: 'Innovate faster', why: 'The pace of technological change is accelerating. By harnessing artificial intelligence, IEEE can better anticipate emerging technologies and deliver greater value to its members.', gains: ['Faster access to frontier technology', 'More ways to engage in innovation', 'Stronger industry connections'] },
     ],
     goal: 'My goal: through collaboration, innovation and excellent execution, make IEEE Technical Activities deliver more value to every member.',
   },
