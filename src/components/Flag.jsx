@@ -72,6 +72,77 @@ const FLAGS = {
       />
     </>
   ),
+  // India — saffron / white / green bands with the navy Ashoka Chakra.
+  hi: (
+    <>
+      <rect width="60" height="13.33" fill="#FF9933" />
+      <rect y="13.33" width="60" height="13.34" fill="#fff" />
+      <rect y="26.67" width="60" height="13.33" fill="#138808" />
+      <g stroke="#000080" fill="none">
+        <circle cx="30" cy="20" r="5.5" strokeWidth="0.8" />
+        <path
+          d="M30,14.5 V25.5 M24.5,20 H35.5 M26.1,16.1 L33.9,23.9 M33.9,16.1 L26.1,23.9"
+          strokeWidth="0.6"
+        />
+      </g>
+    </>
+  ),
+  // Saudi Arabia (representative for Arabic) — green field, white sword + script mark.
+  ar: (
+    <>
+      <rect width="60" height="40" fill="#006C35" />
+      <path
+        d="M14,18 q8,-4 16,0 q8,4 16,0"
+        stroke="#fff"
+        strokeWidth="1.6"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <rect x="15" y="24" width="28" height="1.8" rx="0.9" fill="#fff" />
+      <path d="M43,24.9 l4,-1.4 v2.8 z" fill="#fff" />
+    </>
+  ),
+  // Bangladesh — green field with a red disc set slightly toward the hoist.
+  bn: (
+    <>
+      <rect width="60" height="40" fill="#006A4E" />
+      <circle cx="27" cy="20" r="9" fill="#F42A41" />
+    </>
+  ),
+  // Portugal (representative for Portuguese) — green/red with a gold emblem at the seam.
+  pt: (
+    <>
+      <rect width="24" height="40" fill="#006600" />
+      <rect x="24" width="36" height="40" fill="#FF0000" />
+      <circle cx="24" cy="20" r="4.5" fill="none" stroke="#FFD700" strokeWidth="1.4" />
+      <circle cx="24" cy="20" r="1.6" fill="#fff" stroke="#C00" strokeWidth="0.5" />
+    </>
+  ),
+  // Indonesia — red over white.
+  id: (
+    <>
+      <rect width="60" height="20" fill="#FF0000" />
+      <rect y="20" width="60" height="20" fill="#fff" />
+    </>
+  ),
+  // Pakistan (representative for Urdu) — white hoist bar, green field, crescent + star.
+  ur: (
+    <>
+      <rect width="60" height="40" fill="#01411C" />
+      <rect width="15" height="40" fill="#fff" />
+      <circle cx="37" cy="20" r="7" fill="#fff" />
+      <circle cx="39.5" cy="18" r="6" fill="#01411C" />
+      <path d={STAR} transform="translate(43,15) scale(2.4)" fill="#fff" />
+    </>
+  ),
+  // Germany — black / red / gold horizontal bands.
+  de: (
+    <>
+      <rect width="60" height="13.33" fill="#000000" />
+      <rect y="13.33" width="60" height="13.34" fill="#DD0000" />
+      <rect y="26.67" width="60" height="13.33" fill="#FFCE00" />
+    </>
+  ),
 };
 
 export function Flag({ code }) {

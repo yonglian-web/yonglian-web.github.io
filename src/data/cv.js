@@ -205,7 +205,7 @@ export const cv = {
     "2002 – 2003: Guest Editor of the journal of Circuits Systems and Signal Processing, Special Issue on Frequency Response Masking Technique and Its Applications, published in March 2003."
   ],
   "conferenceCommittees": [
-    "2024: General Chair, 2026 IEEE International Symposium on Circuits and Systems (ISCAS2026), May 24-27, 2026, Shanghai, China.",
+    "2026: General Chair, 2026 IEEE International Symposium on Circuits and Systems (ISCAS2026), May 24-27, 2026, Shanghai, China.",
     "2024: General Co-Chair, 2024 IEEE International Symposium on Circuits and Systems (ISCAS2024), May 19 – 22, 2024, Singapore.",
     "2024: General Chair, 2024 IEEE Standards Workshop on Digital Health, May 21, 2024, Singapore.",
     "2024: General Chair, 2024 IEEE International Conference on Biomedical Circuits and Systems (BioCAS 2024), Oct. 24-26, 2024, Xi'an, China.",

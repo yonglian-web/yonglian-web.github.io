@@ -1790,3 +1790,14 @@
     font-size: 30px;
   }
 }
+
+/* ============================================================
+   Right-to-left (Arabic, Urdu) — the CampaignLayout sets dir="rtl"
+   on .campaign-site; flexbox/text mostly mirror automatically. These
+   are the few spots that need a nudge.
+   ============================================================ */
+/* Year ranges like "2026.01–" are Latin/numeric — keep them LTR so the
+   trailing en-dash doesn't jump to the front under bidi. */
+.campaign-site[dir='rtl'] .cs-service__year {
+  direction: ltr;
+}

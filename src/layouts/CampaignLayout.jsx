@@ -1,7 +1,11 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useSite } from '../data/useSite.js';
 import { LanguageToggle } from '../components/LanguageToggle.jsx';
+
+// Right-to-left scripts: Arabic and Urdu.
+const RTL_LANGS = ['ar', 'ur'];
 
 const VOTE_URL =
   'https://www.ieee.org/about/corporate/election/technical-activities#yong-peter-lian12?utm_source=website&utm_medium=organic&utm_campaign=2026-candidate-video-lian-bio';
@@ -23,11 +27,15 @@ const navItems = [
 // CV pages share class names but not this wrapper.
 export function CampaignLayout({ children }) {
   const s = useSite();
+  const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
 
+  const lng = String(i18n.language || 'en').slice(0, 2);
+  const dir = RTL_LANGS.includes(lng) ? 'rtl' : 'ltr';
+
   return (
-    <div className="campaign-site">
+    <div className="campaign-site" dir={dir} lang={lng}>
       <header className="cs-header">
         <div className="cs-header__inner">
           <Link className="cs-logo" to="/" onClick={() => setOpen(false)}>
@@ -83,18 +91,20 @@ export function CampaignLayout({ children }) {
             {s.footer.tagline2}
           </div>
         </div>
+        {/* These footer blocks are always English — force LTR so they read
+            correctly even on RTL (Arabic/Urdu) pages. */}
         {s.footer.email ? (
-          <div className="cs-footer__email">
+          <div className="cs-footer__email" dir="ltr">
             <strong>Contact email:</strong> <a href={`mailto:${s.footer.email}`}>{s.footer.email}</a>
           </div>
         ) : null}
-        <div className="cs-footer__disclaimer">{s.footer.disclaimer}</div>
+        <div className="cs-footer__disclaimer" dir="ltr">{s.footer.disclaimer}</div>
         {s.footer.translationDisclaimer ? (
-          <div className="cs-footer__disclaimer cs-footer__disclaimer--translation">
+          <div className="cs-footer__disclaimer cs-footer__disclaimer--translation" dir="ltr">
             <strong>{s.footer.translationTitle}</strong> {s.footer.translationDisclaimer}
           </div>
         ) : null}
-        <div className="cs-footer__disclaimer cs-footer__disclaimer--ieee">{s.footer.ieeeDisclaimer}</div>
+        <div className="cs-footer__disclaimer cs-footer__disclaimer--ieee" dir="ltr">{s.footer.ieeeDisclaimer}</div>
       </footer>
     </div>
   );

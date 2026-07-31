@@ -6,6 +6,13 @@ import { siteEs } from './siteEs.js';
 import { siteIt } from './siteIt.js';
 import { siteJa } from './siteJa.js';
 import { siteKo } from './siteKo.js';
+import { siteHi } from './siteHi.js';
+import { siteAr } from './siteAr.js';
+import { siteBn } from './siteBn.js';
+import { sitePt } from './sitePt.js';
+import { siteId } from './siteId.js';
+import { siteUr } from './siteUr.js';
+import { siteDe } from './siteDe.js';
 
 // English is the base/fallback. Each other language file is a PARTIAL override —
 // it only carries the fields it translates; anything it omits (e.g. the long
@@ -36,6 +43,13 @@ const SITES = {
   it: merge(site, siteIt),
   ja: merge(site, siteJa),
   ko: merge(site, siteKo),
+  hi: merge(site, siteHi),
+  ar: merge(site, siteAr),
+  bn: merge(site, siteBn),
+  pt: merge(site, sitePt),
+  id: merge(site, siteId),
+  ur: merge(site, siteUr),
+  de: merge(site, siteDe),
 };
 
 // Election-site prose uses a dataset swap rather than t(). Unknown/unsupported

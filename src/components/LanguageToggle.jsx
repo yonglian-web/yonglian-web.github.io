@@ -8,8 +8,15 @@ const LANGS = [
   { code: 'fr', label: 'Français' },
   { code: 'es', label: 'Español' },
   { code: 'it', label: 'Italiano' },
+  { code: 'de', label: 'Deutsch' },
   { code: 'ja', label: '日本語' },
   { code: 'ko', label: '한국어' },
+  { code: 'hi', label: 'हिन्दी' },
+  { code: 'ar', label: 'العربية' },
+  { code: 'bn', label: 'বাংলা' },
+  { code: 'pt', label: 'Português' },
+  { code: 'id', label: 'Bahasa Indonesia' },
+  { code: 'ur', label: 'اردو' },
 ];
 
 const CODES = LANGS.map((l) => l.code);
